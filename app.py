@@ -92,7 +92,7 @@ else:
                 st.image(image_path, caption="graph2017.jpg", use_column_width=True)
             else:
                 if t18 == True:
-                    image_path = os.path.join("rawGraphs", "graph2018.jpg")
+                    image_path = os.path.join("rawGraphs", "graph2018.jpeg")
                     st.image(image_path, caption="graph2018.jpg", use_column_width=True)
                 else:
                     if t20 == True:
