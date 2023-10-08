@@ -59,22 +59,33 @@ st.subheader('Our Approach:')
 st.markdown(approachPar)
 
 #bgm_____________________________________________________________
-st.subheader('Mindful Music')
-audio_file = open('bgm.weba', 'rb')
-audio_bytes = audio_file.read()
+# st.subheader('Mindful Music')
+# audio_file = open('bgm.weba', 'rb')
+# audio_bytes = audio_file.read()
 
-st.audio(audio_bytes, format='audio/weba')
+# st.audio(audio_bytes, format='audio/weba')
 
-sample_rate = 44100  # 44100 samples per second
-seconds = 2  # Note duration of 2 seconds
-frequency_la = 440  # Our played note will be 440 Hz
-# Generate array with seconds*sample_rate steps, ranging between 0 and seconds
-t = np.linspace(0, seconds, seconds * sample_rate, False)
-# Generate a 440 Hz sine wave
-note_la = np.sin(frequency_la * t * 2 * np.pi)
-credit = '''City Girl - Ji-Eun's Sunset'''
-st.markdown(credit)
+# sample_rate = 44100  # 44100 samples per second
+# seconds = 2  # Note duration of 2 seconds
+# frequency_la = 440  # Our played note will be 440 Hz
+# # Generate array with seconds*sample_rate steps, ranging between 0 and seconds
+# t = np.linspace(0, seconds, seconds * sample_rate, False)
+# # Generate a 440 Hz sine wave
+# note_la = np.sin(frequency_la * t * 2 * np.pi)
+# credit = '''City Girl - Ji-Eun's Sunset'''
+# st.markdown(credit)
 #bgm end __________________________________________________________
+# m = st.markdown("""
+# <style>
+# div.stButton > button:first-child {
+#     background-color: #0099ff;
+#     color:#ffffff;
+# }
+# div.stButton > button:hover {
+#     background-color: #00ff00;
+#     color:#ff0000;
+#     }
+# </style>""", unsafe_allow_html=True)
 
 #raw data graphing________________________________________
 st.subheader('Raw Data Visualized')
@@ -180,15 +191,31 @@ approachPar = '''Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 st.subheader('Conclusion:')
 st.markdown(approachPar)
 
+#SOURCES
+col9, col11 = st.columns([1,5])
+with col9:
+    st.subheader('Authors:')
+with col11:
+    st.markdown('***')
+    st.markdown('**Carolyn, Cui**')
+    st.markdown('**Gabriel, Lee**')
+    st.markdown('**Joshua, Tapia**')
+    st.markdown('**Liam, Morgan**')
+    st.markdown('**Paul, Stratton**')
+    st.markdown('**Tejas, Bhartiya**')
 
-url1 = "https://kp.gfz-potsdam.de/en/data"
-url2 = "https://omniweb.gsfc.nasa.gov/form/omni_min.html"
+
+
+#SOURCES
+st.subheader('Sources:')
+potsdamnLink = "https://kp.gfz-potsdam.de/en/data"
+nasaLink = "https://omniweb.gsfc.nasa.gov/form/omni_min.html"
 
 col9, col11 = st.columns([1,5])
 with col9:
     emu = Image.open('Icon.png')
     st.image(emu, width=100)
 with col11:
-    st.markdown("[kp values](%s)" % url1)
-    st.markdown("[omniweb data for comparison](%s)" % url2)
+    st.markdown("Helmholtz-Zentrum Potsdam (Kp Values): [kp values](%s)" % potsdamnLink)
+    st.markdown("NASA OmniWeb (DSCOVR Raw Data): [omniweb data for comparison](%s)" % nasaLink)
 
