@@ -8,7 +8,7 @@ import base64
 
 #tab icon_________________________________________
 st.set_page_config(
-        page_title="DISCOVR",
+        page_title="DSCOVR",
         page_icon="Icon.png",
     )
 #Background Image _________________________________
