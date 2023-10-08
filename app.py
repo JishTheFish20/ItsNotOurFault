@@ -184,7 +184,7 @@ credit = '''blahblahblah
         herderder
 '''
 
-col9, col11 = st.columns(2)
+col9, col11 = st.columns([1,5])
 with col9:
     emu = Image.open('Icon.png')
     st.image(emu, width=100)
