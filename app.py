@@ -4,6 +4,32 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import csv
 import os
+import base64
+#Background Image _________________________________
+#@st.experimental_memo
+def get_img_as_base64(file):
+    with open(file, "rb") as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+
+img = get_img_as_base64("bgimg.jpg")
+
+page_bg_img = f"""
+<style>
+[data-testid="stAppViewContainer"] > .main {{
+background-image: url("data:image/png;base64,{img}");
+background-size: cover;
+background-position: top left;
+background-repeat: no-repeat;
+background-attachment: local;
+}}
+
+</style>
+"""
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
 
 #HEADER
 st.header('Finding GeoStorms: using DSCOVR')
@@ -24,6 +50,7 @@ st.subheader('Our Approach:')
 st.markdown(approachPar)
 
 #bgm_____________________________________________________________
+st.subheader('Mindful Music')
 audio_file = open('bgm.weba', 'rb')
 audio_bytes = audio_file.read()
 
@@ -36,10 +63,12 @@ frequency_la = 440  # Our played note will be 440 Hz
 t = np.linspace(0, seconds, seconds * sample_rate, False)
 # Generate a 440 Hz sine wave
 note_la = np.sin(frequency_la * t * 2 * np.pi)
-
+credit = '''City Girl - Ji-Eun's Sunset'''
+st.markdown(credit)
 #bgm end __________________________________________________________
 
 #raw data graphing________________________________________
+st.subheader('Raw Data Visualized')
 col1, col2, col3, col4, col5, col6, col7, col8 = st.columns(8)
 t16 = False
 t17 = False
