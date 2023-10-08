@@ -46,10 +46,20 @@ st.header("",divider='blue')
 
 #OBJECTIVE
 
-objectivePar = '''Use raw data from DSCOVR—faults to predict geomagnetic storms on Earth
+objectivePar = '''Using raw, past to present data taken by DSCOVR, we want to make a model that can predict upcoming geomagnetic storms.
 '''
 st.subheader('Objective:')
 st.markdown(objectivePar)
+
+#Background
+
+backPar = '''Geomagnetic storms can severely impact important systems like GPS and electrical power grids on Earth. The National Oceanic 
+and Atmospheric Administration’s (NOAA’s) space weather station, the Deep Space Climate Observatory (DSCOVR), can measure the strength 
+and speed of the solar wind in space, which enables us to predict geomagnetic storms, but the DSCOVR machine is past its optimal life 
+expectancy and the collected data is prone to error.
+'''
+st.subheader('Background')
+st.markdown(backPar)
 
 #OUR APPROACH
 approachPar = '''In order to predict Geomagnetic storms we used GABE's Massive Brain (GMB) 
@@ -123,38 +133,41 @@ with col7:
 with col8:
     if st.button("2023"):
         t23 = True
-
-if t19 == True:
-    image_path = os.path.join("rawGraphs", "graph2019.jpg")
-    st.image(image_path, caption="graph2019.jpg", use_column_width=True)
-else: 
-    if t23 == True:
-        image_path = os.path.join("rawGraphs", "graph2023.jpg")
-        st.image(image_path, caption="graph2023.jpg", use_column_width=True)
-    else:
-        if t16 == True:
-            image_path = os.path.join("rawGraphs", "graph2016.jpg")
-            st.image(image_path, caption="graph2016.jpg", use_column_width=True)
+if t16 == False and t17 == False and t18 == False and t19 == False and t20 == False and t21 == False and t22 == False and t23 == False:#Jacob's ladder
+    image_path = os.path.join("rawGraphs", "graph2016.jpg")
+    st.image(image_path, caption="graph2016.jpg", use_column_width=True)
+else:
+    if t19 == True:
+        image_path = os.path.join("rawGraphs", "graph2019.jpg")
+        st.image(image_path, caption="graph2019.jpg", use_column_width=True)
+    else: 
+        if t23 == True:
+            image_path = os.path.join("rawGraphs", "graph2023.jpg")
+            st.image(image_path, caption="graph2023.jpg", use_column_width=True)
         else:
-            if t17 == True:
-                image_path = os.path.join("rawGraphs", "graph2017.jpg")
-                st.image(image_path, caption="graph2017.jpg", use_column_width=True)
+            if t16 == True:
+                image_path = os.path.join("rawGraphs", "graph2016.jpg")
+                st.image(image_path, caption="graph2016.jpg", use_column_width=True)
             else:
-                if t18 == True:
-                    image_path = os.path.join("rawGraphs", "graph2018.JPG")
-                    st.image(image_path, caption="graph2018.jpg", use_column_width=True)
+                if t17 == True:
+                    image_path = os.path.join("rawGraphs", "graph2017.jpg")
+                    st.image(image_path, caption="graph2017.jpg", use_column_width=True)
                 else:
-                    if t20 == True:
-                        image_path = os.path.join("rawGraphs", "graph2020.jpg")
-                        st.image(image_path, caption="graph2020.jpg", use_column_width=True)
+                    if t18 == True:
+                        image_path = os.path.join("rawGraphs", "graph2018.JPG")
+                        st.image(image_path, caption="graph2018.jpg", use_column_width=True)
                     else:
-                        if t21 == True:
-                            image_path = os.path.join("rawGraphs", "graph2021.jpg")
-                            st.image(image_path, caption="graph2021.jpg", use_column_width=True)
+                        if t20 == True:
+                            image_path = os.path.join("rawGraphs", "graph2020.jpg")
+                            st.image(image_path, caption="graph2020.jpg", use_column_width=True)
                         else:
-                            if t22 == True:
-                                image_path = os.path.join("rawGraphs", "graph2022.jpg")
-                                st.image(image_path, caption="graph2022.jpg", use_column_width=True)
+                            if t21 == True:
+                                image_path = os.path.join("rawGraphs", "graph2021.jpg")
+                                st.image(image_path, caption="graph2021.jpg", use_column_width=True)
+                            else:
+                                if t22 == True:
+                                    image_path = os.path.join("rawGraphs", "graph2022.jpg")
+                                    st.image(image_path, caption="graph2022.jpg", use_column_width=True)
 #raw data graphing end_____________________________________________________________________________
 
 #DEMO
