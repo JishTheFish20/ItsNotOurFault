@@ -126,7 +126,7 @@ start_year, end_year = st.select_slider(
 st.write('Select Year Between', start_year, 'and', end_year)
 
 arr = np.random.normal(1, 1, size=100)
-fig, ax = pllt.subplots()
+fig, ax = plt.subplots()
 ax.hist(arr, bins=20)
 
 st.pyplot(fig)
