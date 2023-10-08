@@ -180,14 +180,15 @@ approachPar = '''Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 st.subheader('Conclusion:')
 st.markdown(approachPar)
 
-credit = '''blahblahblah
-        herderder
-'''
+
+url1 = "https://kp.gfz-potsdam.de/en/data"
+url2 = "https://omniweb.gsfc.nasa.gov/form/omni_min.html"
 
 col9, col11 = st.columns([1,5])
 with col9:
     emu = Image.open('Icon.png')
     st.image(emu, width=100)
 with col11:
-    st.markdown(credit)
+    st.markdown("[kp values](%s)" % url1)
+    st.markdown("[omniweb data for comparison](%s)" % url2)
 
