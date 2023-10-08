@@ -68,6 +68,7 @@ model to process and show 99.99% accurate predictions
 st.subheader('Our Approach:')
 st.markdown(approachPar)
 
+
 #bgm_____________________________________________________________
 # st.subheader('Mindful Music')
 # audio_file = open('bgm.weba', 'rb')
@@ -96,6 +97,24 @@ st.markdown(approachPar)
 #     color:#ff0000;
 #     }
 # </style>""", unsafe_allow_html=True)
+
+#Raw data processing info
+st.subheader('Raw Data Process')
+rawDat = '''The given data from DSCOVR provided three magnetic vectors 
+(among 50 values of unlabeled raw data) which were the most consistent 
+form of data given. Using the magnitude of these vectors alongside the 
+Kp index values which represent strength of magnetic storms, we were able 
+to visualize the data for the years and observe correlations within. The 
+raw data is incredibly faulty, missing large swathes of dates, containing an 
+abundance of NaN values, and even duplicating many values. However through 
+processing, we were able to get the data to a workable point so that it could 
+be used as a dataset for training and so that it could create these readable graphs. 
+The scatter plot shows the simple trend of "As magnitude increases, Kp index also 
+increases" which is relatively consistent. The heatmap is used to help represent the 
+incomprehensible scale of these datasets, with each year's graph containing hundreds 
+of thousands of datapoints.
+'''
+st.markdown(rawDat)
 
 #raw data graphing________________________________________
 st.subheader('Raw Data Visualized')
