@@ -224,7 +224,7 @@ st.subheader('Conclusion:')
 st.markdown(approachPar)
 
 #SOURCES
-col9, col11 = st.columns([1,5])
+col9, col11, col12 = st.columns([1,2,4])
 with col9:
     st.subheader('Authors:')
 with col11:
@@ -235,6 +235,23 @@ with col11:
     st.markdown('**Liam, Morgan**')
     st.markdown('**Paul, Stratton**')
     st.markdown('**Tejas, Bhartiya**')
+with col12:
+    st.markdown('***')
+    cC = "https://www.linkedin.com/in/carolyn-cui-60879919a/"
+    gL = "https://www.linkedin.com/in/gabriel-lee-0676ba222/"
+    jT = "https://www.linkedin.com/in/joshua-tapia-swe/"
+    lM = "https://www.linkedin.com/in/liamamorgan27/"
+    pS = "https://www.linkedin.com/in/paulstratton56/"
+    tB = "https://www.linkedin.com/in/tejas-bhartiya/"
+    st.markdown("[https://www.linkedin.com/in/carolyn-cui-60879919a/](%s)" % cC)
+    st.markdown("[https://www.linkedin.com/in/gabriel-lee-0676ba222/](%s)" % gL)
+    st.markdown("[https://www.linkedin.com/in/joshua-tapia-swe/](%s)" % jT)
+    st.markdown("[https://www.linkedin.com/in/liamamorgan27/](%s)" % lM)
+    st.markdown("[https://www.linkedin.com/in/paulstratton56/](%s)" % pS)
+    st.markdown("[https://www.linkedin.com/in/tejas-bhartiya/](%s)" % tB)
+
+    
+
 
 
 
