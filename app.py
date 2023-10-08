@@ -5,8 +5,13 @@ import matplotlib.pyplot as plt
 import csv
 import os
 import base64
+
+#tab icon_________________________________________
+st.set_page_config(
+        page_title="DISCOVR",
+        page_icon="Icon.png",
+    )
 #Background Image _________________________________
-#@st.experimental_memo
 def get_img_as_base64(file):
     with open(file, "rb") as f:
         data = f.read()
