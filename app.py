@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import csv
 import os
 import base64
-
+from PIL import Image
 #tab icon_________________________________________
 st.set_page_config(
         page_title="DSCOVR",
@@ -179,3 +179,15 @@ approachPar = '''Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 '''
 st.subheader('Conclusion:')
 st.markdown(approachPar)
+
+credit = '''blahblahblah
+        herderder
+'''
+
+col9, col11 = st.columns(2)
+with col9:
+    emu = Image.open('Icon.png')
+    st.image(emu, width=100)
+with col11:
+    st.markdown(credit)
+
