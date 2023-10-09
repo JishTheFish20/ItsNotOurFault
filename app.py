@@ -62,8 +62,8 @@ st.subheader('Background')
 st.markdown(backPar)
 
 #OUR APPROACH
-approachPar = '''In order to predict Geomagnetic storms we used GABE's Massive Brain (GMB) 
-model to process and show 99.99% accurate predictions
+approachPar = '''We used multiple different machine learning models that
+gave us an average of 40% accuracy 
 '''
 st.subheader('Our Approach:')
 st.markdown(approachPar)
@@ -201,7 +201,7 @@ st.subheader('Prediction Demo:')
 st.markdown(demoPar)
 
 start_year, end_year = st.select_slider(
-    'Select a range of color wavelength',
+    'Select a year to see prediction',
     options=['2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
     value=('2016', '2023'))
 st.write('Select Year Between', start_year, 'and', end_year)
