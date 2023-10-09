@@ -199,7 +199,7 @@ demoPar = '''Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 '''
 st.subheader('Prediction Demo:')
 st.markdown(demoPar)
-
+st.image('graph.png', caption="graph.png")
 start_year, end_year = st.select_slider(
     'Select a year to see prediction',
     options=['2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
