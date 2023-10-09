@@ -62,7 +62,8 @@ st.subheader('Background')
 st.markdown(backPar)
 
 #OUR APPROACH
-approachPar = '''We used multiple different machine learning models that
+approachPar = '''We used multiple different machine learning models from Single-step dense,
+Multi-Step Dense and Single-Step LSTM that
 gave us an average of 40% accuracy 
 '''
 st.subheader('Our Approach:')
@@ -213,12 +214,10 @@ ax.hist(arr, bins=20)
 st.pyplot(fig)
 
 #CONCLUSION
-approachPar = '''Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+approachPar = '''Due to time constraints we were not able to finish
+everything that we wanted to do, however in the future we look forward,
+to make the graph reactive with user input to show or accuracy and also
+be able to make prediction on future dates
 '''
 st.subheader('Conclusion:')
 st.markdown(approachPar)
