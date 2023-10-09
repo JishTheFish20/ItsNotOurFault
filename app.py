@@ -196,17 +196,17 @@ demoPar = '''
 st.subheader('Prediction Demo:')
 st.markdown(demoPar)
 st.image('graph.png', caption="graph.png")
-start_year, end_year = st.select_slider(
-    'Select a year to see prediction',
-    options=['2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
-    value=('2016', '2023'))
-st.write('Select Year Between', start_year, 'and', end_year)
+# start_year, end_year = st.select_slider(
+#     'Select a year to see prediction',
+#     options=['2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+#     value=('2016', '2023'))
+# st.write('Select Year Between', start_year, 'and', end_year)
 
-arr = np.random.normal(1, 1, size=100)
-fig, ax = plt.subplots()
-ax.hist(arr, bins=20)
+# arr = np.random.normal(1, 1, size=100)
+# fig, ax = plt.subplots()
+# ax.hist(arr, bins=20)
 
-st.pyplot(fig)
+# st.pyplot(fig)
 
 #CONCLUSION
 approachPar = '''Due to time constraints we were not able to finish
